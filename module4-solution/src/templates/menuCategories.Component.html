@@ -1,0 +1,8 @@
+Below are the categories
+<br/>
+<ul>
+<li ng-repeat="item in $ctrl.categories">
+<a ui-sref="itemsList({categoryId:item.short_name})"  ui-sref-active="activeTab"> {{item.id}},{{item.short_name}},{{item.name}},{{item.special_instructions}},{{item.url}}</a>
+</li>
+</ul>
+<ui-view> </ui-view>

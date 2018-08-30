@@ -11,6 +11,9 @@ function MenuDataService($http)
 return $http({
   method:"GET",
   url:("https://davids-restaurant.herokuapp.com/categories.json")
+}).then(function(response)
+{
+  return response.data;
 });
 
   }
@@ -20,7 +23,12 @@ return $http({
     return $http({
       method:"GET",
       url:("https://davids-restaurant.herokuapp.com/menu_items.json?category="+categoryShortName)
-    });
+    }).then(function(response)
+  {
+    console.log('Inside Menu Data Service' + categoryShortName);
+    console.log(response.data.menu_items);
+    return response.data;
+  })
   }
 
 }
