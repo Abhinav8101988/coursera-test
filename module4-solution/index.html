@@ -1,28 +1,21 @@
 <!doctype html>
 <html lang="en" ng-app='MenuApp'>
   <head>
-    <title>Narrow Down Your Menu Choice</title>
+    <title>Restaurant Menu App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--  <link rel="stylesheet" href="styles/bootstrap.min.css">-->
     <link rel="stylesheet" href="css/styles.css">
   </head>
 
 
 <body>
 
-  <!--<h1>Welcome to Restaurant Menu</h1>
-
-    <div class="tabs">
-     <a ui-sref="home" ui-sref-active="activeTab">Home</a>
-   </div> -->
-
    <ui-view></ui-view>
 
   <script src="lib/angular.min.js"></script>
   <script src="lib/angular-ui-router.min.js"></script>
   <script src="src/menuapp.module.js"></script>
-  <script src="src/routes.js"></script>
   <script src="src/data.module.js"></script>
+  <script src="src/routes.js"></script>
   <script src= "src/menudata.service.js"></script>
   <script src="src/controllers/menuCategories.Controller.js"></script>
   <script src="src/components/menuCategories.Component.js"></script>

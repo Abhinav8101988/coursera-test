@@ -1,4 +1,5 @@
 (function(){
+  'use strict';
 angular.module('MenuApp').controller('MenuCategoriesController',MenuCategoriesController);
 
 MenuCategoriesController.$inject=['categoryItems'];
