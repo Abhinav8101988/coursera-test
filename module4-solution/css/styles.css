@@ -14,3 +14,7 @@ div.tabs {
 .activeTab {
   font-weight: bold;
 }
+
+li > a:hover {
+  color: red;
+}
