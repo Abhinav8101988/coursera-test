@@ -12,12 +12,14 @@
      $stateProvider
      .state('home',{
        url:'/',
-       templateUrl:'/coursera-test/module4-solution/src/templates/home.Template.html',
+       templateUrl:'src/templates/home.Template.html',
+       ///coursera-test/module4-solution/
        //templateUrl:'/src/templates/home.Template.html'
      })
      .state('categoriesList',{
        url:'/categories-list',
-      templateUrl:'/coursera-test/module4-solution/src/templates/menuCategories.Template.html',
+      templateUrl:'src/templates/menuCategories.Template.html',
+      ///coursera-test/module4-solution/
        // templateUrl:'/src/templates/menuCategories.Template.html',
        controller:'MenuCategoriesController as categoryList',
        resolve:{
@@ -29,7 +31,8 @@
      }).
    state('itemsList',{
      url:'/items-list/{categoryId}',
-     templateUrl:'/coursera-test/module4-solution/src/templates/items.Template.html',
+     templateUrl:'src/templates/items.Template.html',
+     ///coursera-test/module4-solution/
     // templateUrl:'/src/templates/items.Template.html',
      controller:'MenuItemsController as itemList',
      resolve:{
