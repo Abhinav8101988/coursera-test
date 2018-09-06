@@ -1,0 +1,47 @@
+<fieldset class="container">
+    <legend>Sign Up Form Registration</legend>
+    <form name='signupForm' novalidate>
+
+      <input type="text" name="firstname" placeholder="Enter The First Name"
+        ng-model="reg.user.firstname"
+        required>
+        {{ reg.user.firstname }}
+        <span
+          ng-if="(signupForm.firstname.$error.required) && signupForm.firstname.$touched">
+          First Name Is Required
+        </span>
+        <br>
+
+
+      <input type="text" name="lastname" placeholder="Enter The Last Name"
+        ng-model="reg.user.lastname"
+        required>
+       {{ reg.user.lastname }}
+      <span
+      ng-if="(signupForm.lastname.$error.required) && signupForm.lastname.$touched">
+      Last Name Is Required
+      </span>
+      <br>
+
+      <input type="email" name="email" placeholder="Email"
+        ng-model="reg.user.email"
+        required>
+        <span ng-if="signupForm.email.$invalid && signupForm.email.$touched">
+          Must be a valid email address: handle@domain format
+        </span>
+        <br>
+
+        <input type="text" name="menunumber" placeholder="Favourite Dish Menu Number"
+          ng-model="reg.user.menunumber">
+         {{ reg.user.menunumber }}
+        <br>
+
+      <button
+        ng-disabled="signupForm.$invalid"
+        ng-click="reg.submit()">Submit</button>
+
+        <div style="margin-top: 10px;" ng-If="reg.isSaved">
+         Your information has been saved.
+        </div>
+    </form>
+  </fieldset>
