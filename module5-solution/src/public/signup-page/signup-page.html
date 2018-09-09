@@ -1,11 +1,11 @@
+<div class = "container">
 <fieldset class="container">
-    <legend>Sign Up Form Registration</legend>
+  <legend style="color:white">Sign Up Form Registration</legend>
     <form name='signupForm' novalidate>
 
       <input type="text" name="firstname" placeholder="Enter The First Name"
         ng-model="reg.user.firstname"
         required>
-        {{ reg.user.firstname }}
         <span
           ng-if="(signupForm.firstname.$error.required) && signupForm.firstname.$touched">
           First Name Is Required
@@ -16,7 +16,6 @@
       <input type="text" name="lastname" placeholder="Enter The Last Name"
         ng-model="reg.user.lastname"
         required>
-       {{ reg.user.lastname }}
       <span
       ng-if="(signupForm.lastname.$error.required) && signupForm.lastname.$touched">
       Last Name Is Required
@@ -31,12 +30,23 @@
         </span>
         <br>
 
-        <input type="text" name="menunumber" placeholder="Favourite Dish Menu Number"
-          ng-model="reg.user.menunumber">
-         {{ reg.user.menunumber }}
+        <input type="text" name="phonenumber" placeholder="Enter The Phone Number"
+          ng-model="reg.user.phonenumber"
+          required>
+        <span
+        ng-if="(signupForm.phonenumber.$error.required) && signupForm.phonenumber.$touched">
+        Phone Number Is Required
+        </span>
         <br>
 
-      <button
+        <input type="text" name="menunumber" ng-change="reg.resetMenuNumberInfo()" placeholder="Favourite Dish Menu Number"
+          ng-model="reg.user.menunumber">
+         <span ng-if="!reg.menuNumberFound">
+           No such menu number exists
+         </span>
+        <br>
+        <br>
+      <button style="color:black"
         ng-disabled="signupForm.$invalid"
         ng-click="reg.submit()">Submit</button>
 
@@ -44,4 +54,5 @@
          Your information has been saved.
         </div>
     </form>
-  </fieldset>
+</fieldset>
+</div>

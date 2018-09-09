@@ -1,1 +1,22 @@
-<p> This is My Info Page</P>
+<div class="container">
+<div ng-If="myInfo.menuItems">
+<H1>REGISTERED INFORMATION</H1>
+<br>
+<br>
+<div><span>FirstName : </span>{{myInfo.signUpItems.firstname}}</div>
+<div><span>LastName : </span>{{myInfo.signUpItems.lastname}}</div>
+<div><span>Email : </span>{{myInfo.signUpItems.email}}</div>
+<div><span>PhoneNumber : </span>{{myInfo.signUpItems.phonenumber}}</div>
+<br>
+<br>
+<div ng-If="myInfo.menuItems">
+<div><span>Favourite Menu Number : {{myInfo.signUpItems.menunumber}}</span></div>
+<div><span>Item Name : {{myInfo.menuItems.name}}</span></div>
+<div><span>Description : {{myInfo.menuItems.description}}</span></div>
+<br>
+<img ng-src="images/menu/{{myInfo.menuItems.category_short_name}}/{{myInfo.menuItems.category_short_name}}.jpg">
+</div>
+</div>
+
+<div ng-If="!myInfo.menuItems"> Not Signed Up Yet <a ui-sref= "public.signup" ui-sref-active="activeTab">Sign Up Now!</a></div>
+</div>
