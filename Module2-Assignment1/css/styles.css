@@ -41,6 +41,18 @@ p {
 	clear:both;
 }
 
+.color-red {
+  background-color: red;
+}
+
+.color-pink {
+  background-color: pink;
+}
+
+.color-green {
+  background-color: green;
+}
+
 
 /********** Large devices only **********/
 @media (min-width: 992px) {
